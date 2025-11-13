@@ -32,9 +32,9 @@
                         <h3 class="font-bold text-lg mb-3 text-[#0C2B4E]">Kategori</h3>
                         <div class="space-y-2">
                             <button class="w-full text-left px-4 py-2 rounded-lg bg-[#0C2B4E] text-white font-semibold shadow hover:bg-[#163e6d] transition"> Semua </button>
-                            <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-100 transition font-medium text-gray-700"> Makanan </button>
-                            <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-100 transition font-medium text-gray-700"> Minuman </button>
-                            <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-100 transition font-medium text-gray-700"> Snack </button>
+                            @foreach ($categories as $category)
+                            <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-100 transition font-medium text-gray-700"> {{ $category->name }} </button>
+                            @endforeach
                         </div>
                     </div>
                 </aside>
@@ -42,49 +42,23 @@
                 <div class="flex-1">
                     <div class="mb-6 text-gray-600"> Menampilkan <span id="totalProduk" class="font-bold text-[#0C2B4E]">6</span> produk </div>
                     <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        @foreach ($products as $product)
                         <!-- Card Produk -->
                         <div class="product group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition transform hover:-translate-y-2" data-name="Nasi Goreng Spesial">
                             <div class="relative h-56 overflow-hidden">
                                 <img src="https://source.unsplash.com/400x300?fried-rice" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
-                                <span class="absolute top-3 left-3 bg-[#FFD700] text-[#0C2B4E] px-3 py-1 text-xs font-bold rounded-full shadow">Makanan</span>
+                                <span class="absolute top-3 left-3 bg-[#FFD700] text-[#0C2B4E] px-3 py-1 text-xs font-bold rounded-full shadow">{{ $product->category->name }}</span>
                             </div>
                             <div class="p-5">
-                                <h3 class="font-bold text-lg text-[#0C2B4E] mb-2">Nasi Goreng Spesial</h3>
-                                <p class="text-gray-600 text-sm mb-4">Nasi goreng dengan topping lengkap dan rasa autentik khas kantin.</p>
+                                <h3 class="font-bold text-lg text-[#0C2B4E] mb-2">{{ $product->name }}</h3>
+                                <p class="text-gray-600 text-sm mb-4">{{ $product->description }}</p>
                                 <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                                    <span class="font-bold text-[#0C2B4E] text-lg">Rp 20.000</span>
+                                    <span class="font-bold text-[#0C2B4E] text-lg">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
                                     <button class="px-4 py-1.5 bg-[#0C2B4E] text-white rounded-lg hover:bg-[#163e6d] transition shadow"> Pesan </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="product group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition transform hover:-translate-y-2" data-name="Es Teh Manis">
-                            <div class="relative h-56 overflow-hidden">
-                                <img src="https://source.unsplash.com/400x300?iced-tea" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
-                                <span class="absolute top-3 left-3 bg-[#FFD700] text-[#0C2B4E] px-3 py-1 text-xs font-bold rounded-full shadow">Minuman</span>
-                            </div>
-                            <div class="p-5">
-                                <h3 class="font-bold text-lg text-[#0C2B4E] mb-2">Es Teh Manis</h3>
-                                <p class="text-gray-600 text-sm mb-4">Minuman segar pelepas dahaga dengan rasa manis pas.</p>
-                                <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                                    <span class="font-bold text-[#0C2B4E] text-lg">Rp 5.000</span>
-                                    <button class="px-4 py-1.5 bg-[#0C2B4E] text-white rounded-lg hover:bg-[#163e6d] transition shadow"> Pesan </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition transform hover:-translate-y-2" data-name="Roti Bakar Coklat">
-                            <div class="relative h-56 overflow-hidden">
-                                <img src="https://source.unsplash.com/400x300?toast-chocolate" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300" />
-                                <span class="absolute top-3 left-3 bg-[#FFD700] text-[#0C2B4E] px-3 py-1 text-xs font-bold rounded-full shadow">Snack</span>
-                            </div>
-                            <div class="p-5">
-                                <h3 class="font-bold text-lg text-[#0C2B4E] mb-2">Roti Bakar Coklat</h3>
-                                <p class="text-gray-600 text-sm mb-4">Roti bakar dengan olesan coklat lumer dan tekstur renyah.</p>
-                                <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                                    <span class="font-bold text-[#0C2B4E] text-lg">Rp 10.000</span>
-                                    <button class="px-4 py-1.5 bg-[#0C2B4E] text-white rounded-lg hover:bg-[#163e6d] transition shadow"> Pesan </button>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

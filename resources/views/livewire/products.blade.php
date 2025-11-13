@@ -10,12 +10,6 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-
-        @supports (text-wrap: balance) {
-            .text-balance {
-                text-wrap: balance;
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-100">
