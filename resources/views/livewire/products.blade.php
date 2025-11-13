@@ -15,9 +15,7 @@
 <body class="bg-gray-100">
     <livewire:components.navbar>
 
-    <main class="pb-20 bg-gradient-to-b from-[#FCF5EE] to-[#8FABD4]">
-        <livewire:components.list-product>
-    </main>
+    <livewire:components.list-product>
 
     <livewire:components.footer>
 </body>
