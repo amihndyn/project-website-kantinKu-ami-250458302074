@@ -8,15 +8,11 @@ use Livewire\Component;
 
 class ListProduct extends Component
 {
-    public $products, $categories;
-
-    public function mount() {
-        $this->products = Product::with('category')->withCount('likes')->orderBy('likes_count', 'desc')->limit(7)->get()->all();
-        $this->categories = Category::get()->all();
-    }
-
     public function render()
     {
-        return view('livewire.components.list-product');
+        return view('livewire.components.list-product', [
+            'products' => Product::with('category')->get(),
+            'categories' => Category::all(),
+        ]);
     }
 }

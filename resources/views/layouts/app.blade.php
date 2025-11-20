@@ -11,13 +11,13 @@
 <body class="min-h-screen bg-gray-50">
 
     <!-- Navbar -->
-    <livewire:components.navbar />
+    <!-- <livewire:components.navbar /> -->
 
     <!-- Konten utama dari ListProduct -->
     {{ $slot }}
 
     <!-- Footer -->
-    <livewire:components.footer />
+    <!-- <livewire:components.footer /> -->
 
     @livewireScripts
 </body>

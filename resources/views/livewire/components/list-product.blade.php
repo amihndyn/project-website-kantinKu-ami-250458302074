@@ -1,5 +1,5 @@
 <div>
-    <main class="pb-20" style="background-image: url('{{ asset('images/bg.png') }}'); background-size: cover; background-position: center;">
+    <main class="pb-20" style="background-image: url('/images/bg.png'); background-size: cover; background-position: center;">
         <section class="relative py-20 md:py-32" id="home">
             <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
                 <div class="text-center md:text-left">
@@ -19,7 +19,7 @@
                 <div class="flex justify-center md:justify-end">
                     <img 
                     class="w-100 md:w-[1000px]"
-                    src="{{ asset('images/food.png') }}"
+                    src="/images/food.png"
                     style="
                         animation: float3d 5s ease-in-out infinite;
                         transition: transform 0.7s ease;"
