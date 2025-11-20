@@ -45,7 +45,7 @@
                 </div>
             @endforeach
             <div class="flex items-center justify-center">
-                <a href="/products" class="px-8 py-3 bg-[#0C2B4E] text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">Lihat Selengkapnya</a>
+                <a href="/products" wire:navigate class="px-8 py-3 bg-[#0C2B4E] text-white font-bold rounded-lg hover:bg-[#163e6d] transition-colors">Lihat Selengkapnya</a>
             </div>
         </div>
     </div>

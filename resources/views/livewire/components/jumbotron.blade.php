@@ -9,10 +9,10 @@
                 Daftar sekarang untuk akses penuh ke semua fitur!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="#menu" class="px-8 py-3 bg-[#0C2B4E] text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
+                <a href="/products" wire:navigate class="px-8 py-3 bg-[#0C2B4E] text-white font-bold rounded-lg hover:bg-[#163e6d] transition-colors">
                     Lihat Menu
                 </a>
-                <a href="#" class="px-8 py-3 bg-gray-200 text-gray-800 font-bold rounded-lg hover:bg-gray-300 transition-colors">
+                <a href="/signUp" wire:navigate class="px-8 py-3 bg-gray-200 text-gray-800 font-bold rounded-lg hover:bg-gray-300 transition-colors">
                     Daftar Sekarang
                 </a>
             </div>

@@ -15,10 +15,10 @@
                 </div>
 
             <div class="hidden md:flex items-center gap-4">
-                <a href="#" class="px-6 py-2 text-[#0C2B4E] font-semibold hover:text-[#8FABD4] transition-colors">
+                <a href="/signIn" wire:navigate class="px-6 py-2 text-[#0C2B4E] font-semibold hover:text-[#8FABD4] transition-colors">
                     Sign In
                 </a>
-                <a href="#" class="px-6 py-2 bg-[#0C2B4E] text-white rounded-lg font-semibold hover:bg-[#8FABD4] transition-colors">
+                <a href="/signUp" wire:navigate class="px-6 py-2 bg-[#0C2B4E] text-white rounded-lg font-semibold hover:bg-[#8FABD4] transition-colors">
                     Sign Up
                 </a>
             </div>

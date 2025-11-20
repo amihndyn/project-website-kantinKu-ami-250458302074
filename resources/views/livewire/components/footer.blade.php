@@ -1,5 +1,5 @@
 <footer class="bg-[#0C2B4E] text-white">
-    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 py-8 sm:py-12">
         <div class="mb-8 grid grid-cols-2 gap-6 items-start">
         <div>
             <div class="flex items-center gap-2 mb-4">
