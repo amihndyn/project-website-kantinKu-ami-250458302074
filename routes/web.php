@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Index::class);
 Route::get('/products', Product::class);
 
-Route::get('/dashboard', function (){
-    return view('Admin.dashboard');})->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('Admin.dashboard');
+})->name('dashboard');
 
 // Auth
 Route::get('/signIn', Login::class)->name('login');
