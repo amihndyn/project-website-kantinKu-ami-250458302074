@@ -1,24 +1,24 @@
-<nav class="sticky top-0 z-bg-gradient-to-b from-[#8FABD4] to-[#FCF5EE] shadow z-40">
+<nav class="sticky top-0 bg-[#0C2B4E] shadow z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <a href="#" class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-[#0C2B4E] flex items-center justify-center">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-[#8FABD4] flex items-center justify-center">
                     <span class="text-white font-bold text-lg">K</span>
                 </div>
-                <span class="font-bold text-xl text-[#0C2B4E] hidden sm:inline">KantinKu</span>
+                <span class="font-bold text-xl text-[#8FABD4] hidden sm:inline">KantinKu</span>
             </a>
 
             <div class="hidden md:flex items-center gap-8">
-                <a href="/#home" class="text-gray-700 hover:text-[#0C2B4E] transition-colors font-medium">Home</a>
-                <a href="/#about" class="text-gray-700 hover:text-[#0C2B4E] transition-colors font-medium">About</a>
-                <a href="/#menu" class="text-gray-700 hover:text-[#0C2B4E] transition-colors font-medium">Menu</a>
+                <a href="/#home" class="text-white hover:text-[#8FABD4] transition-colors font-medium">Home</a>
+                <a href="/#about" class="text-white hover:text-[#8FABD4] transition-colors font-medium">About</a>
+                <a href="/#menu" class="text-white hover:text-[#8FABD4] transition-colors font-medium">Menu</a>
                 </div>
 
             <div class="hidden md:flex items-center gap-4">
-                <a href="/signIn" wire:navigate class="px-6 py-2 text-[#0C2B4E] font-semibold hover:text-[#8FABD4] transition-colors">
+                <a href="/signIn" wire:navigate class="px-6 py-2 text-white font-semibold hover:text-[#8FABD4] transition-colors">
                     Sign In
                 </a>
-                <a href="/signUp" wire:navigate class="px-6 py-2 bg-[#0C2B4E] text-white rounded-lg font-semibold hover:bg-[#8FABD4] transition-colors">
+                <a href="/signUp" wire:navigate class="px-6 py-2 bg-[#8FABD4] text-white rounded-lg font-semibold hover:bg-[#0C2B4E] transition-colors">
                     Sign Up
                 </a>
             </div>

@@ -3,8 +3,8 @@
         <div class="mb-8 grid grid-cols-2 gap-6 items-start">
         <div>
             <div class="flex items-center gap-2 mb-4">
-                <div class="w-10 h-10 rounded-lg bg-[#1A4B7C] flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">K</span>
+                <div class="w-10 h-10 rounded-lg bg-[#8FABD4] flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">K</span>
                 </div>
                 <span class="font-bold text-xl">KantinKu</span>
             </div>

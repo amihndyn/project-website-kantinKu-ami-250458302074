@@ -18,7 +18,14 @@
             </div>
         </div>
         <div class="flex justify-center md:justify-end">
-            <img src="https://via.placeholder.com/400x350.png?text=Gambar+Makanan" alt="Aneka Makanan" class="w-80 md:w-[400px] rounded-2xl shadow-lg">
+            <img 
+            class="w-100 md:w-[1000px]"
+            src="{{ asset('images/food.png') }}"
+            style="
+                animation: float3d 5s ease-in-out infinite;
+                transition: transform 0.7s ease;"
+            onmouseover="this.style.transform='perspective(900px) rotateX(12deg) rotateY(-12deg) scale(1.07)';"
+            onmouseout="this.style.transform='';"/>
         </div>
     </div>
 </section>

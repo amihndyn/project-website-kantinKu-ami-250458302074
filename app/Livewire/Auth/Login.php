@@ -24,11 +24,15 @@ class Login extends Component
             return redirect()->route('dashboard'); // ubah sesuai route kamu
         }
 
-        session()->flash('error', 'nim atau password salah.');
+        session()->flash('error', 'NIM atau password salah.');
     }
 
     public function render()
     {
-        return view('livewire.auth.login');
+        // assign layout agar $slot di layouts.app bisa dipakai
+        return view('livewire.auth.login')
+            ->layout('layouts.app', [
+                'title' => 'Login - KantinKu'
+            ]);
     }
 }

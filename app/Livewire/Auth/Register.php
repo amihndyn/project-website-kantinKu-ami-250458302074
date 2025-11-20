@@ -34,6 +34,10 @@ class Register extends Component
 
     public function render()
     {
-        return view('livewire.auth.register');
+        // Assign layout agar $slot di layouts.app bisa dipakai
+        return view('livewire.auth.register')
+            ->layout('layouts.app', [
+                'title' => 'Daftar - KantinKu'
+            ]);
     }
 }
