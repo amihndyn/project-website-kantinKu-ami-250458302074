@@ -2,6 +2,7 @@
 use App\Livewire\Admin\Categories;
 use App\Livewire\Admin\Products;
 use App\Livewire\Auth\Login;
+use App\Livewire\Auth\Logout;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,7 @@ Route::get('/', Index::class)->name('home');
 Route::get('/menu', ProductSearch::class);
 Route::get('/signIn', Login::class)->name('login');
 Route::get('/signUp', Register::class)->name('register');
+Route::post('/logout', Logout::class)->name('logout');
 
 // Protected routes - butuh login
 Route::middleware(['auth'])->group(function () {
@@ -22,7 +24,7 @@ Route::middleware(['auth'])->group(function () {
     
     // 🔥 ADMIN ROUTES - STRUCTURE YANG BENAR
     Route::prefix('admin')->group(function () {
-        Route::get('/admin/dashboard', function () {
+        Route::get('/dashboard', function () {
             // Cek role admin
             if (auth()->user()->role !== 'admin') {
                 return redirect('/products');
