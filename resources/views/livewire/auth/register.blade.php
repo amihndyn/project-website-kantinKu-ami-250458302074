@@ -112,6 +112,24 @@
           @error('nim') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
+        <!-- No Telp -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nomor Telepon</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <input 
+              type="text"
+              wire:model="phone_number"
+              class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2B4E] focus:border-transparent transition duration-200 @error('nim') border-red-500 @enderror" 
+              placeholder="Masukkan Nomor Telepon">
+          </div>
+          @error('phone_number') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+        </div>
+
         <!-- Password -->
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Kata Sandi</label>
