@@ -4,35 +4,25 @@ namespace App\Livewire\Components;
 
 use Livewire\Component;
 use App\Models\Feedback as FeedbackModel;
+use Livewire\Attributes\Validate;
 
 class Feedback extends Component
 {
-    public $name = '';
-    public $email = '';
-    public $message = '';
+    #[Validate('required|string|max:255')]
+    public $name;
 
-    protected $rules = [
-        'name' => 'required|min:3',
-        'email' => 'required|email',
-        'message' => 'required|min:10',
-    ];
+    #[Validate('required|email|max:255')]
+    public $email;
 
-    public function submitFeedback()
-    {
-        $this->validate();
+    #[Validate('required|string|max:255')]
+    public $message;
 
-        // Simpan ke database
+    public function save() {
         FeedbackModel::create([
             'name' => $this->name,
             'email' => $this->email,
             'message' => $this->message,
-            'status' => 'pending',
         ]);
-
-        // Reset form
-        $this->reset(['name', 'email', 'message']);
-
-        // Success message
         session()->flash('feedback_success', 'Terima kasih! Feedback Anda telah dikirim dan akan segera kami tinjau.');
     }
 
