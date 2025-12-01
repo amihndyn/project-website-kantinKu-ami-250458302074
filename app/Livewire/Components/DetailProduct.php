@@ -67,7 +67,7 @@ class DetailProduct extends Component
 
     public function openDetail($productId)
     {
-        $this->product = Product::with('category')->find($productId);
+        $this->product = Product::with('category')->withCount('likes')->withAvg('ratings', 'rating')->find($productId);
         
         if (!$this->product) {
             return;
